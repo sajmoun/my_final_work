@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihlášení</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+    <h1>Přihlášení</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/login" method="post">
+        <label for="username">Uživatelské jméno:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Heslo:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Přihlásit se" class="filter-button">
+    </form>
+    <h2>Registrace</h2>
+    <form action="/register" method="post">
+        <label for="new_username">Uživatelské jméno:</label>
+        <input type="text" id="new_username" name="username" required>
+        <label for="new_password">Heslo:</label>
+        <input type="password" id="new_password" name="password" required>
+        <input type="submit" value="Registrovat se" class="filter-button">
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <title>Detail knihy</title>
+</head>
+<body>
+    <h1>Detail knihy</h1>
+    <p><strong>Název knihy:</strong> {{ book[2] }}</p>
+    <p><strong>Autor:</strong> {{ book[3] }}</p>
+    <p><strong>Rok vydání:</strong> {{ book[4] }}</p>
+    <p><strong>Žánr:</strong> {{ book[5]}}</p>
+    <p><strong>Obsah:</strong> <br> {{ book[6] }}</p>
+    <p><strong>Poznámky:</strong> <br> {{ book[7] }}</p>
+    <a href="/books">Zpět na seznam knih</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail knihy</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+    <h1>{{ book[2] }}</h1>
+    <p><strong>Autor:</strong> {{ book[3] }}</p>
+    <p><strong>Rok:</strong> {{ book[4] }}</p>
+    <p><strong>Žánr:</strong> {{ book[5] }}</p>
+    <p><strong>Obsah:</strong> <br> {{ book[6] }}</p>
+    <p><strong>Poznámky:</strong> <br> {{ book[7] }}</p>
+
+    <a href="/books" class="back-button">Zpět na seznam knih</a>
+</body>
+</html>

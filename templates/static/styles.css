@@ -1,0 +1,133 @@
+/* Globální styly */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Hlavička */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Formulář */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Labely a vstupy */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tlačítka */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.button-blue {
+    background-color: blue;
+}
+
+.button-red {
+    background-color: red;
+}
+
+.button-green {
+    background-color: green;
+}
+
+/* Konsistence velikosti tlačítek */
+.button-container a,
+.button-container button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* Seznam knih */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+li {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li .book-info {
+    flex-grow: 1;
+}
+
+li .book-info a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+
+li .book-actions {
+    display: flex;
+    align-items: center;
+}
+
+li .book-actions form {
+    margin: 0;
+}
+
+li .book-actions .button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Odkazy na tlačítka */
+a.button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    display: inline-block;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    text-align: center;
+}

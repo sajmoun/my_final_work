@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seznam knih</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+    <h1>Seznam knih</h1>
+
+    
+    <form action="/books" method="get" class="form-container">
+        <label for="author">Filtrovat podle autora:</label>
+        <input type="text" id="author" name="author">
+        <input type="submit" value="Filtrovat" class="filter-button">
+    </form>
+
+   
+    <ul>
+        {% for book in books %}
+        <li>
+            <a href="/book/{{ book[0] }}">{{ book[1] }}</a>
+            <form action="/delete_book/{{ book[0] }}" method="post" style="display:inline;">
+                <input type="submit" value="Odstranit" class="delete-button">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+
+   
+    <a href="/welcome" class="back-button">Zpět na úvodní stránku</a>
+</body>
+</html>

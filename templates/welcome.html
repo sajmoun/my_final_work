@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vítejte</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Vítejte</h1>
+    <p>Přihlášený uživatel</p>
+
+    
+    <form action="/add_book" method="post">
+        <label for="title">Název knihy:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="author">Autor:</label>
+        <input type="text" id="author" name="author" required>
+        <label for="year">Rok:</label>
+        <input type="text" id="year" name="year" required>
+        <label for="genre">Žánr:</label>
+        <input type="text" id="genre" name="genre" required>
+        <label for="content">Obsah:</label>
+        <textarea id="content" name="content" required></textarea>
+        <label for="notes">Poznámky:</label>
+        <textarea id="notes" name="notes" required></textarea>
+        <div class="button-group">
+            <input type="submit" value="Přidat knihu" class="add-button">
+            <a href="/books" class="button">Seznam knih</a>
+        </div>
+    </form>
+
+    
+    <div class="button-container">
+        <form action="/logout" method="post" style="display:inline;" class="logou-form">
+            <input type="submit" value="Odhlásit se" class="logout-button">
+        </form>
+        <form action="/delete_account" method="post" style="display:inline;">
+            <input type="submit" value="Smazat účet" class="delete-button">
+        </form>
+    </div>
+</body>
+</html>
